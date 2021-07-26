@@ -33,7 +33,7 @@ TYPES=("Bug Fix" "New Feature")
 selectedType=${TYPES[$RANDOM % 2]}
 date
 echo "Sending $METRIC $VALUE $selectedType" 
-curl -H "Authorization: Bearer $TOKEN" --data "$METRIC $VALUE source=deb-docker-host type=\"$selectedType\" " $URL
+curl -H "Authorization: Bearer $TOKEN" --data "$METRIC $VALUE source=$SOURCE type=\"$selectedType\" " $URL
 
 
 

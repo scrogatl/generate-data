@@ -29,10 +29,11 @@ else
 fi
 TOKEN=<API KEY HERE>
 URL=https://longboard.wavefront.com/report
+SOURCE=<SOURCE / HOST HERE>
 
 date
 echo "Sending $METRIC $VALUE" 
-curl -H "Authorization: Bearer $TOKEN" --data "$METRIC $VALUE source=deb-docker-host" $URL
+curl -H "Authorization: Bearer $TOKEN" --data "$METRIC $VALUE source=$SOURCE" $URL
 
 
 
